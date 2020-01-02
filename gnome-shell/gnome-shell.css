@@ -160,13 +160,13 @@ StScrollBar {
   background-image: url("resource:///org/gnome/shell/theme/checkbox-off.svg"); }
 
 .check-box:focus StBin {
-  background-image: url("ubuntu-checkbox-off-focused.svg"); }
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"); }
 
 .check-box:checked StBin {
   background-image: url("resource:///org/gnome/shell/theme/checkbox.svg"); }
 
 .check-box:focus:checked StBin {
-  background-image: url("ubuntu-checkbox-focused.svg"); }
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-focused.svg"); }
 
 /* Switches */
 .toggle-switch {
@@ -1038,7 +1038,12 @@ StScrollBar {
   background-image: url("resource:///org/gnome/shell/theme/close-window.svg");
   background-size: 32px;
   height: 32px;
-  width: 32px; }
+  width: 32px;
+  -shell-close-overlap: 16px; }
+  .window-close:hover {
+    background-image: url("resource:///org/gnome/shell/theme/close-window-hover.svg"); }
+  .window-close:active {
+    background-image: url("resource:///org/gnome/shell/theme/close-window-active.svg"); }
 
 .window-close {
   -shell-close-overlap: 16px; }
@@ -1562,9 +1567,9 @@ StScrollBar {
   .keyboard-key.shift-key-lowercase {
     background-image: url("resource:///org/gnome/shell/theme/key-shift.svg"); }
   .keyboard-key.shift-key-uppercase {
-    background-image: url("key-shift-uppercase.svg"); }
+    background-image: url("resource:///org/gnome/shell/theme/key-shift-uppercase.svg"); }
   .keyboard-key.shift-key-uppercase:latched {
-    background-image: url("key-shift-latched-uppercase.svg"); }
+    background-image: url("resource:///org/gnome/shell/theme/key-shift-latched-uppercase.svg"); }
   .keyboard-key.hide-key {
     background-image: url("resource:///org/gnome/shell/theme/key-hide.svg"); }
   .keyboard-key.layout-key {
@@ -1817,7 +1822,7 @@ StScrollBar {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
 
 #lockDialogGroup {
-  background: #2c001e url(file:////home/mh/Pictures/background-blured.png);
+  background: #000000 url(file:////home/mh/Pictures/background-blured.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -1923,14 +1928,6 @@ StEntry {
   min-height: 19px;
 }
 
-/* switch colors */
-.toggle-switch-us:checked {
-  background-image: url("ubuntu-toggle-on-us.svg");
-}
-.toggle-switch-intl:checked {
-  background-image: url("ubuntu-toggle-on-intl.svg");
-}
-
 /* font color in switcher */
 .switcher-list .item-box:outlined {
   color: #39a448;
@@ -1976,11 +1973,6 @@ StEntry {
 /* notification selected */
 .notification-banner .notification-button:active {
   background-color: #39a448;
-}
-
-/* window close ubuntu image */
-.window-close {
-  background-image: url("ubuntu-close-window.svg");
 }
 
 /* Based on gnome-shell.css 3.25.91
